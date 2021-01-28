@@ -1,7 +1,7 @@
 <?php
 include './../app/config.php';
 include '../app/Libraries/Controller.php';
-include APP.'/Libraries/Rota.php';
+include '../app//Libraries/Rota.php';
 ?>
 
 <!DOCTYPE html>
