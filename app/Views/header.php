@@ -22,7 +22,7 @@
         </ul>
         <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="text" placeholder="Buscar">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+            <button class="btn btn-outline-info text-white my-2 my-sm-0" type="submit">Buscar</button>
         </form>
     </div>
 </nav>

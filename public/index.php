@@ -1,7 +1,22 @@
 <?php
 include './../app/config.php';
 include '../app/Libraries/Controller.php';
-include '../app//Libraries/Rota.php';
+include '../app/Libraries/Rota.php';
+include '../app/Libraries/Database.php';
+
+$db = new Database();
+
+$nome = 'Daniel Pereira Sanches';
+$email = 'danielsanches6301@gmail.com';
+$senha = '123456';
+
+$db->query("INSERT INTO usuarios (nome, email, senha) VALUES (:nome, :email, :senha)");
+$db->bind(':nome', $nome);
+$db->bind(':email', $email);
+$db->bind(':senha', $senha);
+
+$db->executar();
+
 ?>
 
 <!DOCTYPE html>
