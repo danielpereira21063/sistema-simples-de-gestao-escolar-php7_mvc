@@ -4,45 +4,45 @@
             <h2 class="text-center">Cadastrar</h2>
         </div>
         <div class="card-body">
-            <form action="<?= URL ?>/usuario/login" name="login" method="POST">
+            <form action="<?= URL ?>/usuario/cadastrar" name="login" method="POST">
                 <div class="form-group">
                     <label for="nome">Nome: <sup class="text-danger">*</sup></label>
-                    <input type="text" name="nome" id="nome" class="form-control" value="" placeholder="Nome completo">
+                    <input type="text" name="nome" id="nome" class="form-control <?= isset($dados['nome_erro']) ? 'is-invalid' : '' ?>" value="<?= $dados['nome'] ?? '' ?>" placeholder="Nome completo">
                     <div class="invalid-feedback text-center">
-                        
+                        <?= $dados['nome_erro'] ?? '' ?>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="email">E-mail: <sup class="text-danger">*</sup></label>
-                    <input type="text" name="email" id="email" class="form-control" value="" placeholder="Endereço de e-mail">
+                    <input type="text" name="email" id="email" class="form-control <?= isset($dados['email_erro']) ? 'is-invalid' : '' ?>" value="<?= $dados['email'] ?? '' ?>" placeholder="Endereço de e-mail">
                     <div class="invalid-feedback text-center">
-                        
+                        <?= $dados['email_erro'] ?? '' ?>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="senha">Senha: <sup class="text-danger">*</sup></label>
-                    <input type="password" name="senha" id="senha" class="form-control" value="" placeholder="Crie uma senha">
+                    <input type="password" name="senha" id="senha" class="form-control <?= isset($dados['senha_erro']) ? 'is-invalid' : '' ?>" value="<?= $dados['senha'] ?? '' ?>" placeholder="Crie uma senha">
                     <div class="invalid-feedback text-center">
-                        
+                        <?= $dados['senha_erro'] ?? '' ?>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="confirm_senha">Confirmar senha: <sup class="text-danger">*</sup></label>
-                    <input type="password" name="confirm_senha" id="confirm_senha" class="form-control" value="" placeholder="Confirme sua senha">
+                    <input type="password" name="confirm_senha" id="confirm_senha" class="form-control <?= isset($dados['confirm_senha_erro']) ? 'is-invalid' : '' ?>" value="<?= $dados['confirm_senha'] ?? '' ?>" placeholder="Confirme sua senha">
                     <div class="invalid-feedback text-center">
-                        
+                        <?= $dados['confirm_senha_erro'] ?? '' ?>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-md-4">
-                        <input type="submit" value="Entrar" class="btn btn-success btn-block">
+                        <input type="submit" value="Cadastrar" class="btn btn-success btn-block">
                     </div>
                     <div class="col-md-8 pt-2">
-                        <a class="text-center" href="<?= URL ?>/usuario/cadastrar"><p>Não tem uma conta? Cadastre-se</p></a>
+                        <a class="text-center" href="<?= URL ?>/usuario/login"><p>Tem uma conta? Faça login</p></a>
                     </div>
                 </div>
             </form>
