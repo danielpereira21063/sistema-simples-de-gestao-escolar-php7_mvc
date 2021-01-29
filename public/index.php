@@ -6,16 +6,16 @@ include '../app/Libraries/Database.php';
 
 $db = new Database();
 
-$nome = 'Daniel Pereira Sanches';
-$email = 'danielsanches6301@gmail.com';
-$senha = '123456';
+// $nome = 'Daniel Pereira Sanches';
+// $email = 'danielsanches6301@gmail.com';
+// $senha = '123456';
 
-$db->query("INSERT INTO usuarios (nome, email, senha) VALUES (:nome, :email, :senha)");
-$db->bind(':nome', $nome);
-$db->bind(':email', $email);
-$db->bind(':senha', $senha);
+// $db->query("INSERT INTO usuarios (nome, email, senha) VALUES (:nome, :email, :senha)");
+// $db->bind(':nome', $nome);
+// $db->bind(':email', $email);
+// $db->bind(':senha', $senha);
 
-$db->executar();
+// $db->executar();
 
 ?>
 

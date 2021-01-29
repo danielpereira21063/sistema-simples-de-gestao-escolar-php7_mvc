@@ -4,10 +4,10 @@
          <h2 class="text-center">Entrar no sistema</h2>
       </div>
       <div class="card-body">
-         <form action="<?= URL ?>/usuarios/login" name="login" method="POST">
+         <form action="<?= URL ?>/usuario/login" name="login" method="POST">
             <div class="form-group">
                <label for="email">E-mail: <sup class="text-danger">*</sup></label>
-               <input type="text" name="email" id="email" class="form-control <?= isset($dados['email_erro']) ? 'is-invalid' : '' ?>" value="<?= isset($dados['email']) ? $dados['email'] : '' ?>">
+               <input type="text" name="email" id="email" class="form-control" value="" placeholder="Endereço de e-mail">
                <div class="invalid-feedback text-center">
                 
                </div>
@@ -15,7 +15,7 @@
             <div class="mt-3"></div>
             <div class="form-group">
                <label for="senha">Senha: <sup class="text-danger">*</sup></label>
-               <input type="password" name="senha" id="senha" class="form-control <?= isset($dados['senha_erro']) ? 'is-invalid' : '' ?>" value="<?= isset($dados['senha']) ? $dados['senha'] : '' ?>">
+               <input type="password" name="senha" id="senha" class="form-control" value="" placeholder="Senha">
                <div class="invalid-feedback text-center">
                   
                </div>
@@ -25,8 +25,8 @@
                <div class="col-md-4">
                   <input type="submit" value="Entrar" class="btn btn-success btn-block">
                </div>
-               <div class="col-md-8">
-                  <a href="<?= URL ?>/usuario/cadastrar"><p>Não tem uma conta? Cadastre-se</p></a>
+               <div class="col-md-8 pt-2">
+                  <a class="text-center" href="<?= URL ?>/usuario/cadastrar"><p>Não tem uma conta? Cadastre-se</p></a>
                </div>
             </div>
          </form>
