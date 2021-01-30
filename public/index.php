@@ -1,22 +1,8 @@
 <?php
 include './../app/config.php';
-include '../app/Libraries/Controller.php';
-include '../app/Libraries/Rota.php';
-include '../app/Libraries/Database.php';
-include '../app/Helpers/Validacoes.php';
+include './../app/autoload.php';
 
-$db = new Database();
-
-// $nome = 'Daniel Pereira Sanches';
-// $email = 'danielsanches6301@gmail.com';
-// $senha = '123456';
-
-// $db->query("INSERT INTO usuarios (nome, email, senha) VALUES (:nome, :email, :senha)");
-// $db->bind(':nome', $nome);
-// $db->bind(':email', $email);
-// $db->bind(':senha', $senha);
-
-// $db->executar();
+// $db = new Database();
 
 ?>
 
@@ -25,20 +11,50 @@ $db = new Database();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?= URL ?>/public/libs/bootstrap/css/bootstrap.css">
+
+    <script src="<?= URL ?>/public/vendor/jquery/jquery.js"></script>
+    <script src="<?= URL ?>/public/vendor/bootstrap/js/bootstrap.js"></script>
+    <script src="<?= URL ?>/public/vendor/bootstrap/js/bootstrap-bundle.js"></script>
+    <script src="<?= URL ?>/public/vendor/aos/aos.js"></script>
+    <script src="<?= URL ?>/public/vendor/venobox/venobox.js"></script>
+    <script src="<?= URL ?>/public/vendor/jquery/jquery.js"></script>
+	<script src="<?= URL ?>/public/js/main.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?= URL ?>/public/css/style.css">
+    <!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?= URL ?>/public/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?= URL ?>/public/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+    <!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?= URL ?>/public/vendor/animate/animate.css">
+    <!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="<?= URL ?>/public/vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?= URL ?>/public/vendor/animsition/css/animsition.min.css">
+    <!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?= URL ?>/public/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="<?= URL ?>/public/vendor/daterangepicker/daterangepicker.css">
+    <!--===============================================================================================-->
+	<!-- <link rel="stylesheet" type="text/css" href="< URL ?>/public/css/util.css">
+	<link rel="stylesheet" type="text/css" href="< URL ?>/public/css/main.css"> -->
+
+    <link rel="stylesheet" href="<?= URL ?>/public/vendor/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="<?= URL ?>/public/vendor/aos/aos.css">
+    <link rel="stylesheet" href="<?= URL ?>/public/vendor/boxicons/css/animations.css">
+    <link rel="stylesheet" href="<?= URL ?>/public/vendor/boxicons/css/boxicons.css">
+    <link rel="stylesheet" href="<?= URL ?>/public/vendor/remixicon/remixicon.css">
+    <link rel="stylesheet" href="<?= URL ?>/public/vendor/venobox/venobox.css">
     <title> <?= APP_NAME ?> </title>
 </head>
 <body>
-<?php
-require_once APP.'/Views/header.php';
+    <?php
+    require_once APP.'/Views/header.php';
 
-$rota = new Rota();
+    $rota = new Rota();
 
-require_once APP.'/Views/footer.php';
-?>
-
-    <script src="<?= URL ?>/public/libs/jquery/jquery.js"></script>
-    <script src="<?= URL ?>/public/libs/bootstrap/js/bootstrap.js"></script>
-    <!-- <script src="/public/libs/bootstrap/js/popper.js"></script> -->
+    require_once APP.'/Views/footer.php';
+    ?>
 </body>
 </html>
