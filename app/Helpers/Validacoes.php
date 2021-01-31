@@ -25,8 +25,8 @@ class Validacoes {
         }
     }
 
-    public static function confirmSenha( $senha, $confirmSenha ) {
-        if ( $senha == $confirmSenha ) {
+    public static function confirmSenha( $senha, $confirm_senha ) {
+        if ( $senha === $confirm_senha ) {
             return true;
         } else {
             return false;

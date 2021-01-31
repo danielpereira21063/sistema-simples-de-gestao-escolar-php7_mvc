@@ -10,8 +10,8 @@ define('APP_VERSION', '1.0');
 
 const DB = [
     'HOST' => 'localhost',
-    'USUARIO' => 'root',
-    'BANCO' => 'sistema_escolar',
-    'SENHA' => '',
-    'PORTA' => '3306'
+    'USER' => 'root',
+    'DTBASE' => 'sistema_escolar',
+    'PASS' => '',
+    'PORT' => '3306'
  ];

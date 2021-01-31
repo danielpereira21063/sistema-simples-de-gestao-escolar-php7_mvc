@@ -8,7 +8,7 @@ class Usuario {
     }
 
     public function checarEmail( $email ) {
-        $this->db->query( 'SELECT * FROM usuarios WHERE email = :email' );
+        $this->db->query( "SELECT * FROM usuarios WHERE email = :email" );
         $this->db->bind( ':email', $email );
 
         if ( !$this->db->resultado() ) {
@@ -32,16 +32,24 @@ class Usuario {
     }
 
     public function checarLogin( $email, $senha ) {
-        $this->db->query( 'SELECT * FROM usuarios WHERE email = :email' );
+        $this->db->query( "SELECT * FROM usuarios WHERE email = :email" );
         $this->db->bind( ':email', $email );
         if ( $this->db->resultado() ) {
             $result = $this->db->resultado();
 
             if ( password_verify( $senha, $result->senha ) ) {
-                return true;
+                return $result;
             } else {
                 return false;
             }
+        } else {
+            return false;
         }
+    }
+
+    public function criarSessao($usuario) {
+        $_SESSION['usuario_id'] = $usuario->id;
+        $_SESSION['usuario_nome'] = $usuario->nome;
+        $_SESSION['usuario_email'] = $usuario->email;
     }
 }

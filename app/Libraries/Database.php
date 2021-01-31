@@ -2,53 +2,55 @@
 
 class Database {
     private $host = DB['HOST'];
-    private $user = DB['USUARIO'];
-    private $pass = DB['SENHA'];
-    private $db = DB['BANCO'];
-    private $port = DB['PORTA'];
+    private $user = DB['USER'];
+    private $pass = DB['PASS'];
+    private $db = DB['DTBASE'];
+    private $port = DB['PORT'];
     private $dbh;
     private $stmt;
 
     public function __construct() {
-        $dsn = 'mysql:host='.$this->host.';port='.$this->port.';dbname='.$this->db;
+        $dsn  = 'mysql:host='.$this->host.';port='.$this->port.';dbname='.$this->db;
         $opcoes = [
             PDO::ATTR_PERSISTENT => true,
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
         ];
-
         try {
             $this->dbh = new PDO( $dsn, $this->user, $this->pass, $opcoes );
-        } catch ( PDOException $e ) {
+        } catch( PDOException $e ) {
             print 'Erro! :'.$e->getMessage().'<br>';
             die();
         }
     }
+    //Prepared Statements com query
 
     public function query( $sql ) {
+        //Prepara uma consulta sql
         $this->stmt = $this->dbh->prepare( $sql );
     }
 
-    public function bind($parametro, $valor, $tipo = null) {
-        if(is_null($tipo)) {
-            switch(true) {
-                case is_int($valor):
-                    $tipo = PDO::PARAM_INT;
+    //Vincula um valor a um parâmetro
+
+    public function bind( $parametro, $valor, $tipo = null ) {
+        if ( is_null( $tipo ) ) {
+            switch( true ) {
+                case is_int( $valor ):
+                $tipo = PDO::PARAM_INT;
                 break;
 
-                case is_bool($valor):
-                    $tipo = PDO::PARAM_BOOL;
+                case( is_bool( $valor ) ):
+                $tipo = PDO::PARAM_BOOL;
                 break;
 
-                case is_null($valor):
-                    $tipo = PDO::PARAM_NULL;
+                case is_null( $valor ):
+                $tipo = PDO::PARAM_NULL;
                 break;
 
                 default:
-                    $tipo = PDO::PARAM_STR;
+                $tipo = PDO::PARAM_STR;
             }
         }
-
-        $this->stmt->bindValue($parametro, $valor, $tipo);
+        $this->stmt->bindValue( $parametro, $valor, $tipo );
     }
 
     public function executar() {
@@ -56,16 +58,16 @@ class Database {
     }
 
     public function resultado() {
-        $this->stmt->execute();
-        return $this->stmt->fetch(PDO::FETCH_OBJ);
+        $this->executar();
+        return $this->stmt->fetch( PDO::FETCH_OBJ );
     }
 
     public function resultados() {
-        $this->stmt->execute();
-        return $this->stmt->fetchAll(PDO::FETCH_OBJ);
+        $this->executar();
+        return $this->stmt->fetchAll( PDO::FETCH_OBJ );
     }
 
-    public function totalResults() {
+    public function totalResultados() {
         return $this->stmt->rowCount();
     }
 
