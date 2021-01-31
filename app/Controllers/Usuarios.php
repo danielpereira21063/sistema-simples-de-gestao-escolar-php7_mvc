@@ -4,7 +4,7 @@ class Usuarios extends Controller {
     private $usuarioModel;
 
     public function __construct() {
-        $this->usuarioModel = $this->model('Usuario');
+        $this->usuarioModel = $this->model( 'Usuario' );
     }
 
     public function index() {
@@ -43,22 +43,19 @@ class Usuarios extends Controller {
             } else {
                 if ( !Validacoes::nome( $formulario['nome'] ) ) {
                     $dados['nome_erro'] = 'O nome informado não é válido';
-                }
-                elseif ( !Validacoes::email( $formulario['email'] ) ) {
+                } elseif ( !Validacoes::email( $formulario['email'] ) ) {
                     $dados['email_erro'] = 'O e-mail informado não é válido';
-                }
-                elseif ( !Validacoes::senha( $formulario['senha'] ) ) {
+                } elseif ( !Validacoes::senha( $formulario['senha'] ) ) {
                     $dados['senha_erro'] = 'A senha deve ter no mínimo 6 caracteres';
-                }
-                elseif ( !Validacoes::confirmSenha( $formulario['senha'], $formulario['confirm_senha'] ) ) {
+                } elseif ( !Validacoes::confirmSenha( $formulario['senha'], $formulario['confirm_senha'] ) ) {
                     $dados['confirm_senha_erro'] = 'As senhas não conferem';
                 } else {
-                    $dados['senha'] = password_hash($formulario['senha'], PASSWORD_DEFAULT);
+                    $dados['senha'] = password_hash( $formulario['senha'], PASSWORD_DEFAULT );
 
-                    if($this->usuarioModel->armazenar($dados)) {
+                    if ( $this->usuarioModel->armazenar( $dados ) ) {
                         echo 'Cadastro realizado';
                     } else {
-                        die('Erro ao armazenar Usuario');
+                        die( 'Erro ao armazenar Usuario' );
                     }
                 }
 
@@ -72,7 +69,7 @@ class Usuarios extends Controller {
     }
 
     public function login() {
-        $form = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+        $form = filter_input_array( INPUT_POST, FILTER_SANITIZE_STRING );
 
         if ( isset( $form ) ) {
             $dados = [
@@ -92,8 +89,8 @@ class Usuarios extends Controller {
                 } else {
                     $login = $this->usuarioModel->checarLogin( $form['email'], $form['senha'] );
                     if ( $login ) {
-                        
-                        $this->usuarioModel->criarSessao($login);
+
+                        $this->usuarioModel->criarSessao( $login );
                         Url::redirecionar( 'home/' );
                         // echo 'Logado';
                     } else {
@@ -109,5 +106,13 @@ class Usuarios extends Controller {
         $this->view( 'usuarios/login', $dados );
     }
 
+    public function sair() {
+        unset($_SESSION['usuario_id']);
+        unset($_SESSION['usuario_nome']);
+        unset($_SESSION['usuario_email']);
+        session_destroy();
+        
+        Url::redirecionar('usuarios/login');
+    }
 
 }

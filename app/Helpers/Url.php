@@ -2,6 +2,6 @@
 
 class Url {
     public static function redirecionar($url) {
-        header('Location: '.URL.'/'.$url);
+        echo '<script> window.location = "'.URL.'/'.$url.'";</script>';
     }
 }

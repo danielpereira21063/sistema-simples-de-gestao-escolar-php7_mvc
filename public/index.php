@@ -1,4 +1,5 @@
 <?php
+session_start();
 include './../app/config.php';
 require_once './../app/autoload.php';
 
@@ -21,8 +22,8 @@ include '../app/Views/footer.php';
 ?>
 
 <script src = '<?=URL?>/public/lib/jquery/jquery-3.5.1.js'></script>
-<script src = '<?=URL?>/public/lib/js/popper.js'></script>
 <script src = '<?=URL?>/public/lib/bootstrap/js/bootstrap.js'></script>
+<script src = '<?=URL?>/public/lib/js/popper.js'></script>
 <script src = '<?=URL?>/public/js/jquery.funcoes.js'></script>
 </body>
 </html>

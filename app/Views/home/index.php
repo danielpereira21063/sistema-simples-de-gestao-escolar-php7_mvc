@@ -1,9 +1,11 @@
+<?php isset($_SESSION['usuario_id']) ? : Url::redirecionar('usuarios/login'); ?>
+
 <main role="main">
 
       <section class="jumbotron text-center">
         <div class="container">
-          <h1 class="jumbotron-heading">Exemplo de álbum</h1>
-          <p class="lead text-muted">Algo curto e direto, sobre a coleção abaixo (conteúdo, criador e etc). Faça com que seja curto e legal, mas não tão curto ao ponto de as pessoas pularem ele.</p>
+          <h2 class="jumbotron-heading">Olá, <?= $_SESSION['usuario_nome'] ?></h2>
+          <p class="lead text-muted">O que deseja fazer hoje?</p>
           <p>
             <a href="#" class="btn btn-primary my-2">Call-to-action principal</a>
             <a href="#" class="btn btn-secondary my-2">Call-to-action secundário</a>

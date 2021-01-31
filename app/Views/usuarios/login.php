@@ -14,7 +14,7 @@
 					<form action="<?= URL ?>/usuarios/login" method="POST">
 						<div class="form-group">
 							<label for="email">E-mail: <sup class="text-danger">*</sup></label>
-							<input type="email" name="email" id="email" class="form-control <?= isset($dados['email_erro']) ? 'is-invalid' : '' ?>" value="<?= $dados['email'] ?? '' ?>" placeholder="Digite seu e-mail">
+							<input type="text" name="email" id="email" class="form-control <?= isset($dados['email_erro']) ? 'is-invalid' : '' ?>" value="<?= $dados['email'] ?? '' ?>" placeholder="Digite seu e-mail">
 							<div class="invalid-feedback text-center">
 								<?= $dados['email_erro'] ?? '' ?>
 							</div>
