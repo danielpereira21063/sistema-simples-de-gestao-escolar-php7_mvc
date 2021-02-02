@@ -120,7 +120,10 @@ class Usuarios extends Controller {
     }
 
     public function listar() {
-        $this->view( 'usuarios/listar' );
+        $dados = [
+            $this->usuarioModel->listarUsuarios(10)
+        ];
+        $this->view( 'usuarios/listar', $dados );
     }
 
 }
