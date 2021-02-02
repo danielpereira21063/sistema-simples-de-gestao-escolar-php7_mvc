@@ -1,13 +1,8 @@
-/**
-* Template Name: Arsha - v2.2.1
-* Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
+.card-title {
+  font-weight: bolder;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
@@ -1660,7 +1655,7 @@ section {
   background: #37517e;
 }
 
-#footer .footer-newsletter {
+footer .footer-newsletter {
   padding: 50px 0;
   background: #f3f5fa;
   text-align: center;
@@ -1668,7 +1663,7 @@ section {
   color: #444444;
 }
 
-#footer .footer-newsletter h4 {
+footer .footer-newsletter h4 {
   font-size: 24px;
   margin: 0 0 20px 0;
   padding: 0;
@@ -1693,7 +1688,7 @@ section {
   width: calc(100% - 100px);
 }
 
-#footer .footer-newsletter form input[type="submit"] {
+footer .footer-newsletter form input[type="submit"] {
   position: absolute;
   top: 0;
   right: 0;
@@ -1787,7 +1782,7 @@ section {
   color: #47b2e4;
 }
 
-#footer .footer-top .social-links a {
+.footer .footer-top .social-links a {
   font-size: 18px;
   display: inline-block;
   background: #47b2e4;
@@ -1802,28 +1797,28 @@ section {
   transition: 0.3s;
 }
 
-#footer .footer-top .social-links a:hover {
+.footer .footer-top .social-links a:hover {
   background: #209dd8;
   color: #fff;
   text-decoration: none;
 }
 
-#footer .footer-bottom {
+.footer .footer-bottom {
   padding-top: 30px;
   padding-bottom: 30px;
   color: #fff;
 }
 
-#footer .copyright {
+.footer .copyright {
   float: left;
 }
 
-#footer .credits {
+.footer .credits {
   float: right;
   font-size: 13px;
 }
 
-#footer .credits a {
+.footer .credits a {
   transition: 0.3s;
 }
 

@@ -1,4 +1,4 @@
-<div class="content p-5">
+<div class="content">
 	 <div class="container">
 		<div class="row">
 		  <div class="col-md-6">
@@ -8,7 +8,7 @@
 			 <div class="row justify-content-center">
 				<div class="col-md-8 justify-content-center p-4">
 				  <div class="mb-4">
-				  <h3 class="text-center">Criar uma conta</h3>
+				  <h3 class="text-center" style="font-weight: bolder;">Criar uma conta</h3>
 				  <!-- <p class="mb-4">Lorem ipsum dolor sit amet elit. Sapiente sit aut eos consectetur adipisicing.</p> -->
 				</div>
 				<form action="<?= URL ?>/usuarios/cadastrar" method="POST">
@@ -44,10 +44,10 @@
 						</div>
 					</div>
 
-				  <input type="submit" value="Entrar" class="btn btn-block btn-primary" style="background: blue;">
+				  <input type="submit" value="Cadastrar" class="btn btn-block btn-primary" style="background: blue;">
 
 				  <div class="col-md-12 mt-2 text-center">
-						<a href="<?= URL ?>/usuarios/login"><p>Tem uma conta? Faça login</p></a>
+						<a class="text-primary" href="<?= URL ?>/usuarios/login"><p>Tem uma conta? Faça login</p></a>
 					</div>
 				</form>
 				</div>

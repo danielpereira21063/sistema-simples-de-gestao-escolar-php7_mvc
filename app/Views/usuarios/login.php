@@ -1,4 +1,4 @@
-<div class="content p-5">
+<div class="content">
 	<div class="container">
     	<div class="row">
 			<div class="col-md-6">
@@ -8,7 +8,7 @@
 				<div class="row justify-content-center">
 					<div class="col-md-8 justify-content-center p-4">
 					<div class="mb-4">
-						<h3 class="text-center">Entrar no sistema</h3>
+						<h3 class="text-center" style="font-weight: bolder;">Entrar no sistema</h3>
 						<!-- <p class="mb-4">Lorem ipsum dolor sit amet elit. Sapiente sit aut eos consectetur adipisicing.</p> -->
 					</div>
 					<form action="<?= URL ?>/usuarios/login" method="POST">
@@ -30,7 +30,7 @@
 
 						<input type="submit" value="Entrar" class="btn btn-block btn-primary" style="background: blue;">
 						<div class="col-md-12 mt-2 text-center">
-							<a href="<?= URL ?>/usuarios/cadastrar"><p>Não tem uma conta? Cadastre-se</p></a>
+							<a class="text-primary" href="<?= URL ?>/usuarios/cadastrar"><p>Não tem uma conta? Cadastre-se</p></a>
 						</div>
 					</form>
 				</div>

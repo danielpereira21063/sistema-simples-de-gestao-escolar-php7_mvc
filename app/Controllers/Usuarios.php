@@ -8,7 +8,7 @@ class Usuarios extends Controller {
     }
 
     public function index() {
-
+        $this->view( 'usuarios/index' );
     }
 
     public function cadastrar() {
@@ -107,12 +107,20 @@ class Usuarios extends Controller {
     }
 
     public function sair() {
-        unset($_SESSION['usuario_id']);
-        unset($_SESSION['usuario_nome']);
-        unset($_SESSION['usuario_email']);
+        unset( $_SESSION['usuario_id'] );
+        unset( $_SESSION['usuario_nome'] );
+        unset( $_SESSION['usuario_email'] );
         session_destroy();
-        
-        Url::redirecionar('usuarios/login');
+
+        Url::redirecionar( 'usuarios/login' );
+    }
+
+    public function perfil() {
+        $this->view( 'usuarios/perfil' );
+    }
+
+    public function listar() {
+        $this->view( 'usuarios/listar' );
     }
 
 }
