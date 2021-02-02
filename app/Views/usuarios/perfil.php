@@ -1,11 +1,17 @@
-<div class="container">
-   <div class="card-body">
+<style>
+	label {
+  		font-weight: bolder;
+	}
+</style>
+
+<div class="container" style="max-width: 700px">
+   <div class="card-body align">
             <div class="card">
                <div class="card-header bg-dark">
                     <p class="text-light">Perfil do usuario</p>
                </div>
 
-               <div class="card-body mb-2">
+               <div class="card-body mb-2" style="background-color: #ddd;">
                   <div class="card-text">
                     <form action="">
                         <label for="nome">Nome de usuario:</label>

@@ -1,3 +1,9 @@
+<style>
+	label {
+  		font-weight: bolder;
+	}
+</style>
+
 <div class="content">
 	<div class="container">
     	<div class="row">

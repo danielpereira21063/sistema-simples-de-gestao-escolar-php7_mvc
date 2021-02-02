@@ -14,13 +14,13 @@ require_once './../app/autoload.php';
 <link rel="shortcut icon" href="<?=URL?>/public/img/flavico.png" type="image/x-icon">
 
 <link rel = 'stylesheet' href = '<?=URL?>/public/lib/bootstrap/css/bootstrap.css'>
-<link rel = 'stylesheet' href = "<?=URL?>/public/css/style.css">
 <link rel = 'stylesheet' href = "<?=URL?>/public/vendor/aos.css">
 <link rel = 'stylesheet' href = "<?=URL?>/public/vendor/boxicons/animations.css">
 <link rel = 'stylesheet' href = "<?=URL?>/public/vendor/boxicons/boxicons.css">
 <link rel = 'stylesheet' href = "<?=URL?>/public/vendor/remixicon/remixicon.css">
 <link rel = 'stylesheet' href = "<?=URL?>/public/vendor/boxicons/transformations.css">
 <link rel = 'stylesheet' href = "<?=URL?>/public/vendor/venobox/venobox.css">
+<link rel = 'stylesheet' href = "<?=URL?>/public/css/style.css">
 <title></title>
 </head>
 <body>
