@@ -64,3 +64,8 @@
 	 </div>
   </div>
 </div>
+
+<script>
+   document.title = 'Criar conta';
+   document.head.children[2].href = "<?=URL?>/public/img/icons/home-ico.png";
+</script>

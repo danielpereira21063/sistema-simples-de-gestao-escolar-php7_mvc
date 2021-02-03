@@ -14,6 +14,7 @@
             <table class="table table-bordered table-hover table-striped">
                 <thead>
                     <tr class="bg-dark text-white">
+                        <th>ID</th>
                         <th>Nome</th>
                         <th>Endereço de E-mail</th>
                         <th>Data de cadastro</th>
@@ -23,6 +24,7 @@
                 <tbody>
                     <?php foreach($dados[0] as $registro): ?>
                     <tr>
+                        <td><?=$registro->id?></td>
                         <td><?=$registro->nome?></td>
                         <td><?=$registro->email?></td>
                         <td><?=$registro->data_criacao?></td>

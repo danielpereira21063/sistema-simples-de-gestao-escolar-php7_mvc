@@ -18,3 +18,8 @@
         </div>
     </div>
 </section>
+
+<script>
+   document.title = 'Página inicial';
+   document.head.children[2].href = "<?=URL?>/public/img/icons/home-ico.png";
+</script>

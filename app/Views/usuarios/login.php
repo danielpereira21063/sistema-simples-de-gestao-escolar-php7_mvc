@@ -48,3 +48,8 @@
     	</div>
   	</div>
 </div>
+
+<script>
+   document.title = 'Entrar no sistema';
+   document.head.children[2].href = "<?=URL?>/public/img/icons/home-ico.png";
+</script>

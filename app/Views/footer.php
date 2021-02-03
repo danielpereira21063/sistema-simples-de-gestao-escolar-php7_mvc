@@ -11,7 +11,7 @@
                   Sistema simples de Gestão Escolar. VERSÃO <?= APP_VERSION ?>
                   <div class="border-top"></div>
                   <div class="text-light mt-2">
-                     &COPY; 2021 - <?= DATE('Y') ?> Daniel Pereira Sanches
+                     &COPY; 2021 - <?= DATE('Y') ?> <a class="link" href="<?=URL?>/pagina/sobre">Daniel Pereira Sanches</a>
                   </div>
                </small>
                <p class="float-right">

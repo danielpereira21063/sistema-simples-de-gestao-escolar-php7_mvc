@@ -52,8 +52,9 @@ class Usuario {
         $_SESSION['usuario_nome'] = $usuario->nome;
         $_SESSION['usuario_email'] = $usuario->email;
     }
+
     public function listarUsuarios($limite) {
-        $this->db->query("SELECT nome, email, data_criacao FROM usuarios LIMIT $limite");
+        $this->db->query("SELECT id, nome, email, data_criacao FROM usuarios LIMIT $limite");
         if($this->db->resultados()) {
             return $this->db->resultados();
         } else {

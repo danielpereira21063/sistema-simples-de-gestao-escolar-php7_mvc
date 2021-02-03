@@ -12,7 +12,7 @@ require_once './../app/autoload.php';
 <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
 
 <link rel="shortcut icon" href="<?=URL?>/public/img/flavico.png" type="image/x-icon">
-
+<!-- <link rel="stylesheet" href="<?=URL?>/public/lib/bootstrap/icons/"> -->
 <link rel = 'stylesheet' href = '<?=URL?>/public/lib/bootstrap/css/bootstrap.css'>
 <link rel = 'stylesheet' href = "<?=URL?>/public/vendor/aos.css">
 <link rel = 'stylesheet' href = "<?=URL?>/public/vendor/boxicons/animations.css">

@@ -8,11 +8,10 @@
 
 <main role='main'>
 
-    <section class='jumbotron text-center'>
-        <div class='container container-fluid'>
+    <section class='text-center'>
+        <div class='container-fluid'>
             <div class='row mb-4'>
-                <div class='col-md-2'></div>
-                <div class='col col-md-8'>
+                <div class='col col-md-6'>
 
                     <h2 class='jumbotron-heading'>Olá, <?=Sessao::nomeUsuario(); ?>
                     </h2>
@@ -22,20 +21,26 @@
                         <a href='#' class='btn btn-secondary my-2'>Listar todos os alunos</a><br>
                         <a href='#' class='btn btn-primary my-2'>Visualizar notas das turmas</a>
                         <a href='usuarios/listar' class='btn btn-secondary my-2'>Listar todos os usuarios</a>
-                        <div class="conteiner container-fluid">
-                            <form action='<?=URL?>/buscar' method='POST'>
-    
-                                <input class='form-control mb-1' type='search' name='pesquisar' id='pesquisa'
-                                    placeholder='Faça uma pesquisa'>
-                                <input class='btn btn-dark' type='submit' value='Buscar'>
-    
-                            </form>
-                        </div>
                     </p>
                     
                 </div>
-                <div class='col-md-2'></div>
             </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-inline">
+                        
+                        <form action='<?=URL?>/buscar' method='POST'>
+                            <div>
+    
+                                <input class='form-control mb-1' type='search' name='pesquisar' id='pesquisa' placeholder='Faça uma pesquisa'>
+                                <button class='btn btn-md btn-outline-light' type='submit'><img src="<?=URL?>/public/img/icons/search.png" alt=""></button>
+    
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 
         </div>
     </section>

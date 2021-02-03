@@ -7,14 +7,14 @@
         float: right;
     }
 </style>
-
+<div class="col-md-12">
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
     <?php if(!Sessao::logado()): ?>
     <a class="navbar-brand" href="<?=URL?>"><img class="img-responsive img-fluid" width="40px"
-            src="<?=URL?>/public/img/ico.png" alt=""> &nbsp;&nbsp;Sistema-Escolar</a>
+            src="<?=URL?>/public/img/icons/iconfinder-home.png" alt=""> &nbsp;Sistema-Escolar</a>
     <?php else: ?>
     <a class="navbar-brand" href="<?=URL?>/usuarios"><img class="img-responsive img-fluid" width="40px"
-            src="<?=URL?>/public/img/ico.png" alt=""> &nbsp;&nbsp;Sistema-Escolar</a>
+            src="<?=URL?>/public/img/icons/iconfinder-home.png" alt=""> &nbsp;Sistema-Escolar</a>
     <?php endif; ?>
     <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
         aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"><span
@@ -23,7 +23,7 @@
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <?php if(Sessao::logado()): ?>
             <li class="nav-item">
-                <a class="nav-link" href="<?=URL?>/usuarios">Início<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="<?=URL?>/usuarios"><img src="<?=URL?>/public/img/icons/home.png"> Início<span class="sr-only">(current)</span></a>
             </li>
             <?php endif; ?>
             <li class="nav-item dropdown">
@@ -73,3 +73,4 @@
     </ul>
     </div>
 </nav>
+</div>
