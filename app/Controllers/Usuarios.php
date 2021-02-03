@@ -112,7 +112,7 @@ class Usuarios extends Controller {
         unset( $_SESSION['usuario_email'] );
         session_destroy();
 
-        Url::redirecionar( 'usuarios/login' );
+        Url::redirecionar( 'home' );
     }
 
     public function perfil() {

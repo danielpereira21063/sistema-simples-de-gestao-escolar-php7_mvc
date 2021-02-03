@@ -20,15 +20,16 @@ require_once './../app/autoload.php';
 <link rel = 'stylesheet' href = "<?=URL?>/public/vendor/remixicon/remixicon.css">
 <link rel = 'stylesheet' href = "<?=URL?>/public/vendor/boxicons/transformations.css">
 <link rel = 'stylesheet' href = "<?=URL?>/public/vendor/venobox/venobox.css">
+<!-- <link rel = 'stylesheet' href = "<?//URL?>/public/css/theme.css"> -->
 <link rel = 'stylesheet' href = "<?=URL?>/public/css/style.css">
 <title></title>
 </head>
 <body>
-<?php
-include '../app/Views/header.php';
-$rotas = new Rota();
-include '../app/Views/footer.php';
-?>
+<?php include '../app/Views/header.php'; ?>
+<div class="container-fluid">
+    <?php $rotas = new Rota(); ?>
+</div>
+<?php include '../app/Views/footer.php'; ?>
 
 <script src = '<?=URL?>/public/lib/jquery/jquery-3.5.1.js'></script>
 <script src = '<?=URL?>/public/lib/bootstrap/js/bootstrap.js'></script>

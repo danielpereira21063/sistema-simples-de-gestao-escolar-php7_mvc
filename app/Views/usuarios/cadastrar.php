@@ -6,10 +6,7 @@
 <div class="content">
 	 <div class="container">
 		<div class="row">
-		  <div class="col-md-6">
-			 <img src="<?= URL ?>/public/img/background-ico.svg" alt="Image" class="img-fluid">
-		  </div>
-		  <div class="col-md-6 contents">
+		  <div class="col-md-8 contents">
 			 <div class="row justify-content-center">
 				<div class="col-md-8 justify-content-center p-4">
 				  <div class="mb-4">
@@ -59,7 +56,9 @@
 			 </div>
 
 		  </div>
-
+		  <div class="col-md-4 m-auto">
+			 <img src="<?= URL ?>/public/img/background-ico.svg" alt="Image" class="img-fluid">
+		  </div>
 		</div>
 	 </div>
   </div>

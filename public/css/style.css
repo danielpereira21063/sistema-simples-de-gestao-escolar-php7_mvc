@@ -2,9 +2,11 @@
   font-weight: bolder;
 }
 
+
 body {
   font-family: "Open Sans", sans-serif;
-  color: #444444;
+  color: #929b9e;
+  background: rgb(14, 14, 14);
 }
 
 a {

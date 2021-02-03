@@ -2,15 +2,12 @@
     h3 {
         font-weight: bolder;
     }
-    a {
+    a.nome {
         color: black;
         font-weight: bolder;
     }
-    a:hover {
+    a.nome:hover {
         color: darkblue;
-    }
-    p {
-        font-size: 9pt;
     }
     img.logo {
         width: 16px;
@@ -42,13 +39,13 @@
                 
                 <div class="card-body bg-light">
                     <div class="text-dark">
-                        <img class="logo" src="<?=URL?>/public/img/icons/gmail-logo.png" alt=""><a href=""> danielsanches6301@gmail.com&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                        <img class="logo" src="<?=URL?>/public/img/icons/youtube-logo.png" alt=""><a href=""> Daniel Pereira Sanches</a>
-                        <img class="logo" src="<?=URL?>/public/img/icons/facebook-logo.png" alt=""><a href=""> Daniel Pereira Sanches&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                        <img class="logo" src="<?=URL?>/public/img/icons/instagram-logo.png" alt=""><a href=""> Daniel Pereira Sanches</a>
-                        <img class="logo" src="<?=URL?>/public/img/icons/twitter-logo.png" alt=""><a href=""> Daniel Pereira Sanches</a>
-                        <img class="logo" src="<?=URL?>/public/img/icons/github-logo.png" alt=""><a href=""> Daniel Pereira Sanches</a>
-                        <img class="logo" src="<?=URL?>/public/img/icons/whatsapp-logo.png" alt=""><a href="">(22)999668032</a>
+                        <img class="logo" src="<?=URL?>/public/img/icons/gmail-logo.png" alt=""><a class="nome" href=""> danielsanches6301@gmail.com&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                        <img class="logo" src="<?=URL?>/public/img/icons/youtube-logo.png" alt=""><a class="nome" href=""> Daniel Pereira Sanches</a>
+                        <img class="logo" src="<?=URL?>/public/img/icons/facebook-logo.png" alt=""><a class="nome" href=""> Daniel Pereira Sanches&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                        <img class="logo" src="<?=URL?>/public/img/icons/instagram-logo.png" alt=""><a class="nome" href=""> Daniel Pereira Sanches</a>
+                        <img class="logo" src="<?=URL?>/public/img/icons/twitter-logo.png" alt=""><a class="nome" href=""> Daniel Pereira Sanches</a>
+                        <img class="logo" src="<?=URL?>/public/img/icons/github-logo.png" alt=""><a class="nome" href=""> Daniel Pereira Sanches</a>
+                        <img class="logo" src="<?=URL?>/public/img/icons/whatsapp-logo.png" alt=""><a class="nome" href="">(22)999668032</a>
                     </div>
                 </div>
             </div>
