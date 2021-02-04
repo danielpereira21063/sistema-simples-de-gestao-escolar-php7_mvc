@@ -121,9 +121,25 @@ class Usuarios extends Controller {
 
     public function listar() {
         $dados = [
-            $this->usuarioModel->listarUsuarios(10)
+            $this->usuarioModel->listarUsuarios( 10 )
         ];
         $this->view( 'usuarios/listar', $dados );
+    }
+
+    public function editar() {
+        $form = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+        if(isset($form)) {
+            $dados = [
+                'nome' => $form['nome'],
+                'email' => $form['email'],
+                'senha_atual' => $form['senha_atual'],
+                'nova_senha' => $form['nova_senha']
+            ];
+        } else {
+            $dados = [];
+        }
+        var_dump($form);
+        $this->view( 'usuarios/editar-perfil', $dados );
     }
 
 }
