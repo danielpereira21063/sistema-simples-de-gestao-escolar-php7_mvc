@@ -116,7 +116,7 @@ class Usuarios extends Controller {
     }
 
     public function perfil() {
-        $this->view( 'usuarios/perfil' );
+        $this->view( 'usuarios/perfil/index' );
     }
 
     public function listar() {
@@ -139,7 +139,7 @@ class Usuarios extends Controller {
             $dados = [];
         }
         var_dump($form);
-        $this->view( 'usuarios/editar-perfil', $dados );
+        $this->view( 'usuarios/perfil/editar', $dados );
     }
 
 }

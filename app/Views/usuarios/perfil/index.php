@@ -4,16 +4,16 @@
    }
 </style>
 
-<div class="container-fluid" style="max-width: 700px">
+<div class="container-fluid my-4" style="max-width: 700px">
    <div class="card-body">
       <div class="card">
          <div class="card-header bg-dark">
             <p class="text-light text-center">Perfil do usuario</p>
             <div class="col-md-6 float-left mb-2">
-               <a class="btn btn-sm btn-block btn-primary" href="<?=URL?>/usuarios/editar">Editar</a>
+               <a class="btn btn-sm btn-block btn-primary" href="<?=URL?>/usuarios/perfil/editar">Editar</a>
             </div>
             <div class="col-md-6 float-right mb-2">
-               <a class="btn btn-sm btn-block btn-danger" href="<?=URL?>/usuarios/excluir">Excluir conta</a>
+               <a class="btn btn-sm btn-block btn-danger" href="<?=URL?>/usuarios/perfil/excluir">Excluir conta</a>
             </div>
          </div>
 

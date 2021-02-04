@@ -13,7 +13,7 @@
 
          <div class="card-body mb-2" style="background-color: #eee;">
             <div class="card-text">
-               <form action="<?=URL?>/usuarios/editar" method="POST">
+               <form action="<?=URL?>/usuarios/perfil/editar" method="POST">
                   <label for="nome">Nome de usuario:</label>
                   <input class="form-control mb-4" value="<?=$_SESSION['usuario_nome'] ?? ''?>" type="text" name="nome"
                      id="nome" placeholder="Insira seu novo nome de usuario">

@@ -15,10 +15,15 @@ class Rota {
         require_once '../app/Controllers/'.$this->controlador.'.php';
         $this->controlador = new $this->controlador;
 
-        if ( isset( $url[1] ) ) {
+        if ( isset( $url[1] ) && (!isset($url[2])) ) {
             if ( method_exists( $this->controlador, $url[1] ) ) {
                 $this->metodo = $url[1];
                 unset($url[1]);
+            }
+        } elseif(isset($url[2])) {
+            if ( method_exists( $this->controlador, $url[2] ) ) {
+                $this->metodo = $url[2];
+                unset($url[2]);
             }
         }
 
