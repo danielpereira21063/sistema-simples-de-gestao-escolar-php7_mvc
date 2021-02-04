@@ -1,3 +1,5 @@
+<?php Paginas::alterarHeader('Sobre o desenvolvedor', URL.'/public/img/icons/admin_person_user_man-ico.png'); ?>
+
 <style>
     h3 {
         font-weight: bolder;
@@ -53,8 +55,3 @@
     </div>
 
 </div>
-
-<script>
-   document.title = 'Sobre o desenvolvedor';
-   document.head.children[2].href = "<?=URL?>/public/img/icons/admin_person_user_man-ico.png";
-</script>

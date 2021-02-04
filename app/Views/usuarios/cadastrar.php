@@ -1,3 +1,5 @@
+<?php Paginas::alterarHeader('Criar uma conta', URL.'/public/img/icons/cadastrar-ico.png'); ?>
+
 <style>
 	label {
   		font-weight: bolder;
@@ -63,8 +65,3 @@
 	 </div>
   </div>
 </div>
-
-<script>
-   document.title = 'Criar conta';
-   document.head.children[2].href = "<?=URL?>/public/img/icons/home-ico.png";
-</script>

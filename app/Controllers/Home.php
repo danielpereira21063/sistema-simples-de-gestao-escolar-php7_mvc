@@ -13,8 +13,4 @@ class Home extends Controller {
 
         $this->view( 'home/index', $dados );
     }
-
-    public function sobre() {
-        $this->view( 'pagina/sobre' );
-    }
 }

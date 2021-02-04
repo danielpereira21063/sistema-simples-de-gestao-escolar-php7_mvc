@@ -1,3 +1,5 @@
+<?php Paginas::alterarHeader('Entrar no sistema',URL.'/public/img/icons/user-man.png');?>
+
 <style>
 	label {
   		font-weight: bolder;
@@ -47,8 +49,3 @@
     	</div>
   	</div>
 </div>
-
-<script>
-   document.title = 'Entrar no sistema';
-   document.head.children[2].href = "<?=URL?>/public/img/icons/home-ico.png";
-</script>

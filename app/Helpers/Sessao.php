@@ -33,9 +33,17 @@ class Sessao {
                 }
             } elseif(isset($nomeUsuario[0]) && isset($nomeUsuario[1])) {
                 $nome = $nomeUsuario[0]. ' ' .$nomeUsuario[1];
+            } else {
+                $nome = $nomeUsuario[0];
             }
             return $nome;
         }
-        var_dump($nomeUsuario);
+    }
+
+    public static function primeiroNomeUser() {
+        if(isset($_SESSION['usuario_id'])) {
+            $nomeUsuario = explode(' ', $_SESSION['usuario_nome']);
+            return $nomeUsuario;
+        }
     }
 }

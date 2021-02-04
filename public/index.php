@@ -10,8 +10,8 @@ require_once './../app/autoload.php';
 <head>
 <meta charset = "UTF-8">
 <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
-
-<link rel="shortcut icon" href="<?=URL?>/public/img/flavico.png" type="image/x-icon">
+<link rel="shortcut icon" href="<?=URL?>/public/img/" type="image/x-icon">
+<link rel = 'stylesheet' href = "<?=URL?>/public/css/style.css">
 <!-- <link rel="stylesheet" href="<?=URL?>/public/lib/bootstrap/icons/"> -->
 <link rel = 'stylesheet' href = '<?=URL?>/public/lib/bootstrap/css/bootstrap.css'>
 <link rel = 'stylesheet' href = "<?=URL?>/public/vendor/aos.css">
@@ -21,14 +21,20 @@ require_once './../app/autoload.php';
 <link rel = 'stylesheet' href = "<?=URL?>/public/vendor/boxicons/transformations.css">
 <link rel = 'stylesheet' href = "<?=URL?>/public/vendor/venobox/venobox.css">
 <!-- <link rel = 'stylesheet' href = "<?//URL?>/public/css/theme.css"> -->
-<link rel = 'stylesheet' href = "<?=URL?>/public/css/style.css">
 <title></title>
+
+<style>
+    body {
+        font-family: "Open Sans", sans-serif;
+        background-color: #cecece;
+    }
+</style>
 </head>
 <body>
 <?php include '../app/Views/header.php'; ?>
-<div class="container-fluid">
+<!-- <div class="container-fluid"> -->
     <?php $rotas = new Rota(); ?>
-</div>
+<!-- </div> -->
 <?php include '../app/Views/footer.php'; ?>
 
 <script src = '<?=URL?>/public/lib/jquery/jquery-3.5.1.js'></script>
