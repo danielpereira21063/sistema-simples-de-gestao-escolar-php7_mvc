@@ -7,7 +7,7 @@
             opacity: .98;
         }
     </style>
-        <div class="page-header py-5 text-center position-relative">
+        <div class="mt-5 page-header py-5 text-center position-relative">
 	    <!-- <div class="bg-shapes-right"></div>
 	    <div class="bg-shapes-left"></div> -->
 	    <div class="container">
@@ -47,7 +47,7 @@
         font-weight: bold;
     }
 </style>
-<div class="page-header py-3 text-center position-relative">
+<div class="mt-5 page-header py-5 text-center position-relative">
 	    <div class="container">
             <h3 class="page-heading single-col-max mx-auto text-white" style="font-weight: bolder;";>
                 Olá, <?=Sessao::nomeUsuario(); ?>

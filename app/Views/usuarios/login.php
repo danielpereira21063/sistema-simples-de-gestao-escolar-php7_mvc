@@ -6,10 +6,10 @@
 	}
 </style>
 
-<div class="content">
+<div class="content p-5">
 	<div class="container">
     	<div class="row">
-			<div class="col-md-8 contents mt-5">
+			<div class="col-md-8 contents">
 				<div class="row justify-content-center">
 					<div class="col-md-8 justify-content-center p-4">
 					<div class="mb-4">

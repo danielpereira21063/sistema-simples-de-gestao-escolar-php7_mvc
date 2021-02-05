@@ -41,9 +41,25 @@ class Sessao {
     }
 
     public static function primeiroNomeUser() {
-        if(isset($_SESSION['usuario_id'])) {
+        if(Sessao::logado()) {
             $nomeUsuario = explode(' ', $_SESSION['usuario_nome']);
             return $nomeUsuario;
         }
+    }
+
+    public static function idUsuarioLogado() {
+        if(Sessao::logado()) {
+            return $_SESSION['usuario_id'];
+        } else {
+            return false;
+        }
+    }
+
+    public function nomeCompletoUsuario() {
+        return $_SESSION['usuario_nome'];
+    }
+
+    public function emailUsuario() {
+        return $_SESSION['usuario_email'];
     }
 }
