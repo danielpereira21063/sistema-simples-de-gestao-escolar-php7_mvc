@@ -7,14 +7,14 @@
 </style>
 
 <div class="content p-5">
-	<div class="container">
+	<div class="container p-3">
     	<div class="row">
 			<div class="col-md-8 contents">
 				<div class="row justify-content-center">
 					<div class="col-md-8 justify-content-center p-4">
 					<div class="mb-4">
 						<h3 class="text-center" style="font-weight: bolder;">Entrar no sistema</h3>
-						<!-- <p class="mb-4">Lorem ipsum dolor sit amet elit. Sapiente sit aut eos consectetur adipisicing.</p> -->
+						<?=Sessao::mensagem('login_invalido') ?? ''?>
 					</div>
 					<form action="<?= URL ?>/usuarios/login" method="POST">
 						<div class="form-group">

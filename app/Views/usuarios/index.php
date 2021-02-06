@@ -1,1 +1,3 @@
-<?php Url::redirecionar( '' ); ?>
+<?php
+    Url::redirecionar( '' );
+?>

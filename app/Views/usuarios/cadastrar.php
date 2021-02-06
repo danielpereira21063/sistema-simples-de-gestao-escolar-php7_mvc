@@ -5,8 +5,8 @@
   		font-weight: bolder;
 	}
 </style>
-<div class="content">
-	 <div class="container">
+<div class="content mt-5">
+	 <div class="container p-3">
 		<div class="row">
 		  <div class="col-md-8 contents">
 			 <div class="row justify-content-center">

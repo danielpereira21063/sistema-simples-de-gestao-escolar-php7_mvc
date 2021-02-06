@@ -15,7 +15,7 @@ class Rota {
         require_once '../app/Controllers/'.$this->controlador.'.php';
         $this->controlador = new $this->controlador;
 
-        if ( isset( $url[1] ) && (!isset($url[2])) ) {
+        if ( isset( $url[1] ) && !isset($url[2]) ) {
             if ( method_exists( $this->controlador, $url[1] ) ) {
                 $this->metodo = $url[1];
                 unset($url[1]);
@@ -29,7 +29,6 @@ class Rota {
 
         $this->parametros = $url ? array_values( $url ) : [];
         call_user_func_array( [$this->controlador, $this->metodo], $this->parametros );
-
     }
 
     public function url() {

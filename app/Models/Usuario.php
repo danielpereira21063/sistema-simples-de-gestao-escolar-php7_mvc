@@ -62,10 +62,9 @@ class Usuario {
         }
     }
 
-    public function verificarSenhaParaAtualizar( $novaSenha, $id_sessao ) {
-        // $result = $this->db->query( 'UPDATE usuarios SET senha = :nova_senha WHERE id = :id_sessao' );
-        $this->db->query( 'SELECT * FROM usuarios WHERE id = :id_sessao' );
-        $this->db->bind( ':id_sessao', $id_sessao );
+    public function verificarSenha( $novaSenha, $idUsuario ) {
+        $this->db->query( 'SELECT * FROM usuarios WHERE id = :id_usuario' );
+        $this->db->bind( ':id_usuario', $idUsuario );
         if ( $this->db->resultado() ) {
             $result = $this->db->resultado();
             if ( password_verify( $novaSenha, $result->senha ) ) {
@@ -78,14 +77,31 @@ class Usuario {
         }
     }
 
-    public function update( $dados, $id_sessao ) {
-        $this->db->query( 'UPDATE usuarios SET nome = :nome, email = :email, senha = :nova_senha WHERE usuarios.id = :id_sessao' );
-        $this->db->bind( ':id_sessao', $id_sessao );
+    public function update( $dados, $idUsuario ) {
+        $this->db->query( 'UPDATE usuarios SET nome = :nome, email = :email, senha = :nova_senha WHERE usuarios.id = :id_usuario' );
+        $this->db->bind( ':id_usuario', $idUsuario );
         $this->db->bind( ':nome', $dados['nome'] );
         $this->db->bind( ':email', $dados['email'] );
         $this->db->bind( ':nova_senha', $dados['nova_senha'] );
         if ( $this->db->executar() ) {
             return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function excluirUsuario( $id ) {
+        $this->db->query( 'SELECT id FROM usuarios WHERE id = :id' );
+        $this->db->bind( ':id', $id );
+        if ( $this->db->executar() ) {
+            var_dump( $this->db->resultado() );
+            if ( $this->db->resultado() ) {
+                return true;
+            } else {
+                return false;
+            }
+            // $this->db->query( 'DELETE FROM usuarios WHERE id = :id' );
+            // $this->db->bind( ':id', $id );
         } else {
             return false;
         }

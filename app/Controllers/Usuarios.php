@@ -91,9 +91,8 @@ class Usuarios extends Controller {
                     if ( $login ) {
                         $this->usuarioModel->criarSessao( $login );
                         Url::redirecionar( '' );
-                        // echo 'Logado';
                     } else {
-                        // echo 'Email ou senha incorretos';
+                        Sessao::mensagem('login_invalido', 'E-mail ou senha incorretos', 'alert alert-danger');
                     }
 
                 }
@@ -125,12 +124,12 @@ class Usuarios extends Controller {
         $this->view( 'usuarios/listar', $dados );
     }
 
-//////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////
     //=>>>>>>>>>>>>>>>>>>>>>> PEFIL do usuário <<<<<<<<<<<<<<<<<<<<<<< //
 
     public function editar() {
-        $form = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
-        if(isset($form)) {
+        $form = filter_input_array( INPUT_POST, FILTER_SANITIZE_STRING );
+        if ( isset( $form ) ) {
             $dados = [
                 'nome' => $form['nome'],
                 'email' => $form['email'],
@@ -152,36 +151,18 @@ class Usuarios extends Controller {
                     $dados['nova_senha_erro'] = 'Digite sua nova senha';
                 }
             } else {
-                // 
-                //     if ( !Validacoes::nome( $formulario['nome'] ) ) {
-                //         $dados['nome_erro'] = 'O nome informado não é válido';
-                //     } elseif ( !Validacoes::email( $formulario['email'] ) ) {
-                //         $dados['email_erro'] = 'O e-mail informado não é válido';
-                //     } elseif ( !Validacoes::senha( $formulario['senha'] ) ) {
-                //         $dados['senha_erro'] = 'A senha deve ter no mínimo 6 caracteres';
-                //     } elseif ( !Validacoes::confirmSenha( $formulario['senha'], $formulario['confirm_senha'] ) ) {
-                //         $dados['confirm_senha_erro'] = 'As senhas não conferem';
-                //     } else {
-                //         $dados['senha'] = password_hash( $formulario['senha'], PASSWORD_DEFAULT );
-    
-                //         if ( $this->usuarioModel->armazenar( $dados ) ) {
-                //             echo 'Cadastro realizado';
-                //         } else {
-                //             die( 'Erro ao armazenar Usuario' );
-                //         }
-                //     }
-                // }
-                if(!Validacoes::nome($form['nome'])) {
+                if ( !Validacoes::nome( $form['nome'] ) ) {
                     $dados['nome_erro'] = 'O nome informado não é válido';
-                } elseif(!Validacoes::email($form['email'])) {
+                } elseif ( !Validacoes::email( $form['email'] ) ) {
                     $dados['email_erro'] = 'O e-mail informado não é válido';
-                } elseif(!Validacoes::senha($form['nova_senha'])) {
+                } elseif ( !Validacoes::senha( $form['nova_senha'] ) ) {
                     $dados['nova_senha_erro'] = 'A senha deve ter no mínimo 6 caracteres';
-                } else if($this->usuarioModel->verificarSenhaParaAtualizar($form['nova_senha'], Sessao::idUsuarioLogado())) {
+                } elseif ( $this->usuarioModel->verificarSenha( $form['nova_senha'], Sessao::idUsuarioLogado() ) ) {
                     $dados['senha_atual_erro'] = 'Senha incorreta';
                 } else {
-                    $dados['nova_senha'] = password_hash($form['nova_senha'], PASSWORD_DEFAULT);
-                    if($this->usuarioModel->update($dados, Sessao::idUsuarioLogado())) {
+                    $dados['nova_senha'] = password_hash( $form['nova_senha'], PASSWORD_DEFAULT );
+                    if ( $this->usuarioModel->update( $dados, Sessao::idUsuarioLogado() ) ) {
+                        Url::redirecionar( 'usuarios/perfil' );
                         echo 'ATUALIZADO';
                     }
                 }
@@ -190,12 +171,19 @@ class Usuarios extends Controller {
         } else {
             $dados = [];
         }
-        var_dump($form);
+        var_dump( $form );
         $this->view( 'usuarios/perfil/editar', $dados );
     }
 
-    public function excluir() {
-
+    public function excluir($id) {
+        $id;
+        // if($id) {
+            if($this->usuarioModel->excluirUsuario($id)) {
+                echo ('Deletado');
+            } else {
+                die('Erro ao deletar conta');
+            }
+        // }
     }
 
 }
