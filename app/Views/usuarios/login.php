@@ -15,6 +15,7 @@
 					<div class="mb-4">
 						<h3 class="text-center" style="font-weight: bolder;">Entrar no sistema</h3>
 						<?=Sessao::mensagem('login_invalido') ?? ''?>
+						<?=Sessao::mensagem('cadastro_realizado') ?? ''?>
 					</div>
 					<form action="<?= URL ?>/usuarios/login" method="POST">
 						<div class="form-group">

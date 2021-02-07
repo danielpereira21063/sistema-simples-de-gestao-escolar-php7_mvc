@@ -1,6 +1,6 @@
 <?php
 
-class Paginas {
+class Pagina {
     public static function alterarHeader($tituloPagina, $iconePagina) {
         echo "<script>
                     document.title = '".$tituloPagina."';

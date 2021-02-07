@@ -11,7 +11,7 @@ define('APP_VERSION', '1.0');
 const DB = [
     'HOST' => '127.0.0.1',
     'USER' => 'root',
-    'DTBASE' => 'sistema_escolar',
-    'PASS' => '',
+    'DB_NAME' => 'sistema_escolar',
+    'PASS_WD' => '',
     'PORT' => '3306'
  ];

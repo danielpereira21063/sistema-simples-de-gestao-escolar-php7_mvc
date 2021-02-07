@@ -10,7 +10,7 @@
 </style>
 
 
-<nav class="navbar navbar-expand-md navbar-dark fixed-to" id="navPrincipal">
+<nav class="navbar navbar-expand-md navbar-dark fixed-top" id="navPrincipal">
     <a class="navbar-brand" href="<?=URL?>">
         <img class="img-brand img-fluide" width="35px" src="<?=URL?>/public/img/icons/iconfinder-home.png" alt="">
         Sistema-Escolar

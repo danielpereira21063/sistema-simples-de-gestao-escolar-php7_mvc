@@ -3,8 +3,8 @@
 class Database {
     private $host = DB['HOST'];
     private $user = DB['USER'];
-    private $pass = DB['PASS'];
-    private $db = DB['DTBASE'];
+    private $pass = DB['PASS_WD'];
+    private $db = DB['DB_NAME'];
     private $port = DB['PORT'];
     private $dbh;
     private $stmt;

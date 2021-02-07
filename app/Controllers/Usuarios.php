@@ -53,9 +53,10 @@ class Usuarios extends Controller {
                     $dados['senha'] = password_hash( $formulario['senha'], PASSWORD_DEFAULT );
 
                     if ( $this->usuarioModel->armazenar( $dados ) ) {
-                        echo 'Cadastro realizado';
+                        Sessao::mensagem('cadastro_realizado', 'Cadastro realizado com sucesso. Entre com seu e-mail e senha para prosseguir');
+                        Url::redirecionar('usuarios/login');
                     } else {
-                        die( 'Erro ao armazenar Usuario' );
+                        Sessao::mensagem('cadastro', 'Erro ao cadastrar registro', 'alert alert-danger');
                     }
                 }
 
